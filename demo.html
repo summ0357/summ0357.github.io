@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>html</title>
+		<link rel="stylesheet" href="mystyle.css">
+	</head>
+	<body>
+		<h1>please enter 3 number(1-10) and click Submit</h1>
+		<p>there would be only 1 round</p>
+		每次開始遊戲時會亂數產生 3 個得獎號碼 (範圍是數字 1~10 不重複)；當使用者輸入 3 個號碼並按下開獎按鈕後，會開始比對輸入的號碼及得獎號碼 (不管排列先後順序)，全部對中時為頭獎、2 個號碼對中為貳獎、1 個號碼對中為參獎
+<br>
+		Please choose your first number
+		<select name="number1" id="number1" >
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		</select>
+		<br>
+
+		Please choose your second number
+		<select name="number2" id="number2" >
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		
+		</select>
+
+		<br>
+		Please choose your third number
+		<select name="number3" id="number3" >
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>	
+		</select>
+		<br>
+
+		<p id ="demo"></p>
+		<Input Type ="Button" Value="Submit" onClick="myFunction();">
+		<Input Type="Button" Value="reset" onClick="window.location.reload();">
+		
+
+		
+		<script>
+		
+
+	
+		function myFunction() {
+		const luckynum1 = Math.floor(Math.random() * 10) + 1;
+		
+		do {
+		const luckynum2 = Math.floor(Math.random() * 10) + 1;}
+		while( luckynum1 != luckynum2)
+
+		do {
+		const luckynum3 = Math.floor(Math.random() * 10) + 1;}
+		while(luckynum3 != luckynum1 && luckynum3 != luckynum2)
+		
+		
+		let input1 = document.getElementById("number1").value;
+		let input2 = document.getElementById("number2").value;
+		let input3 = document.getElementById("number3").value;
+		let count = 0;
+		let text;
+
+		
+		if (input1 == luckynum1 || luckynum2 || luckynum3) {
+		count++;
+		}
+
+		else if (input2 == luckynum1 || luckynum2 || luckynum3) {
+		count++;
+		}
+
+		else if(input3 == luckynum1 || luckynum2 || luckynum3 ){
+		count++;
+		}
+		
+		if (count == 1)
+		{text = 'congrat you got 1 right. You win the third award$100';}
+		else if(count == 2)
+		{text = 'congrat you got 2 right.You win the second award$1000';}
+		else if (count == 3)
+		{text = 'congrat you got 3 right.You win the first award$10000';}
+		else{text = sorry you lost;}
+
+		document.getElementById("demo").innerHTML = text;
+		}
+
+	</script>
+		<div></div>
+<hr>
+		
+	</body>
+</html>

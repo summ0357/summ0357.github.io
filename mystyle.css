@@ -1,0 +1,40 @@
+h1{
+color:white;
+background-color:#FFFF00;
+text-shadow:3px 3px 6px #000000;
+}
+
+div {
+text-align:center;
+margin:auto;
+color:black;
+font-size:48px;
+color:yellow;
+}
+
+
+div {
+width:100px;
+height:100px;
+background: blue;
+transition: width 3s, height 3s,transform 3s, background 2s ease-in;
+}
+
+div:hover {
+width:400px;
+height:400px;
+background:red;
+transform:rotate(180deg);
+}
+
+body {
+background-color:#F0FFF0;
+}
+
+p {
+background-color:white;
+color:gray;
+}
+hr {
+color:#fffe681;
+}
